@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Toronto Cupcake Redesign</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html">[insert name]</a>
+      </div>
+
+      <ul class="nav-links white">
+        <li>
+          <a href="index.html">Projects</a>
+        </li>
+        <li>
+            <a href="misc.html">Misc</a>
+          </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+      </ul>
+
+      <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="outer-container">
+      <div class="title">
+        Toronto Cupcake Redesign
+      </div>
+      <img
+        class="large-image"
+        src="images/redesign cover.png"
+        alt="redesign cover image"
+      />
+
+      <div class="container">
+        <div class="subtitle">
+          Context
+        </div>
+        <div class="body-text">
+          Redesign was a project for CSCI 1300: User Interfaces and User
+          Experiences, a course at Brown University taught by
+          <a href="https://jeffhuang.com/" target="_blank">Jeff Huang</a>.
+        </div>
+        <div class="body-text">
+            The goal was to document the workflow in redesigning an existing webpage by integrating UI principles of learnability, usability, and memorability. 
+        </div>
+        <div class="body-text">
+            The webpage chosen for the redesign is the landing page of <a href="https://www.torontocupcake.com/index.html" target="_blank">Toronto Cupcake</a>, an online cupcake ordering and delivering service. This page was selected due to its potential for improvement in navigation and layout. 
+            This project aimed to enhance the user experience when interacting with the page. This was achieved by analyzing the original website, prototyping low-fidelity and high-fidelity mockups of the landing page, and coding a responsive design with HTML and CSS. 
+          </div>
+
+        <div class="subtitle">
+          Accessibility
+        </div>
+        <div class="body-text">
+            Accessibility enables individuals with diverse abilities to effectively use an interface. As part of the analysis process, I first put the orignal webpage into <a href="https://wave.webaim.org/report#/https://www.torontocupcake.com/index.html" target="_blank">WebAIM WAAVE</a>, a tool to help detect possible accessibility problems <br><br>
+            The tool notes the following issues for the webpage: <br>
+               - Multiple links go to the same URL <br>
+               - Some link-texts contain information that are out of context <br>
+               - Menu bar cannot be easily accessed <br>
+               - Alternative text is present for an image that is within a link <br><br>
+            These are all points that need attention during the early stages of the redesign process. 
+        </div>
+        <div class="subtitle">
+            Wireframing
+          </div>
+          <div class="body-text">
+            Below is an image of the original landing page. The interface lacks a central hub to navigate through the site and is instead locked away through a small menu bar that can be easily missed. The content displayed throughout the page lacks structure and is disorganized. 
+          </div>
+          <br>
+          <img class="body-image" src="images/responsive redesign/ipad.jpg" alt="lowfi">
+          <div class="body-text">
+            I created three wireframes (desktop, tablet, and mobile view) to help simplify the landing page while keeping the site's main purpose and functionality. 
+  
+            The major changes include simplifying the overall features, making the navigation and footer selections more distinct, reforming the hierarchical strucutre, and organizing the overall layout of the interface. These changes decluttered distracting
+            content and unnecessary information, optimizing the user flow of the page. 
+          </div>
+        </div>
+        <br>
+      
+          <img class="body-image" src="images/responsive redesign/wireframedesktop.png" alt="desktop view">
+          <img class="body-image" src="images/responsive redesign/ipad2.png" alt="ipad view">
+          <img class="body-image" src="images/responsive redesign/iphone3.png" alt="iphone view">
+        <br>
+        <div class="container">
+          <div class="body-text">
+            Here is the complete scrolling wireframe view for the redesigned webpage.
+          </div>
+        </div>
+        <br>
+        <img class="body-image" src="images/responsive redesign/wire.png" alt="lowfi">
+        
+        <div class="container">
+        <div class="subtitle">
+          Behind the Design Concept 
+        </div>
+        <div class="table-container">
+          <table>
+            <tbody><tr>
+              <th width="20%">UI Principle</th>
+              <th width="40%">Original Interface</th>
+              <th width="40%">Redesigned Interface</th>
+            </tr>
+            <tr>
+              <td valign="top">
+                <br>
+                Intuitive Design 
+              </td>
+              <td valign="top">
+                <ul>
+                  Redundant features located in various parts of the page make it difficult to understand the difference between them and which one to click on. 
+                </ul>
+              </td>
+              <td valign="top">
+                <ul>
+                  A centralized and more simplified navigation bar and footer section were introudced to reduce cognitive load. Some of the components were taken out so that less effort is spent to browse through the site. 
+                </ul>
+              </td>
+            </tr>
+  
+            <tr>
+              <td valign="top">
+                <br>
+                Readability
+              </td>
+              <td valign="top">
+                <ul>
+                  There is a lack of spatial relationships between items on the page to cohesively present the main purpose or selling point of the company.  
+                </ul>
+              </td>
+              <td valign="top">
+                <ul>
+                  The content of the page was restructured based on importance to help draw attention to significant pieces of information that aid the scanning of the page. 
+                </ul>
+              </td>
+            </tr>
+  
+            <tr>
+              <td valign="top">
+                <br>
+                Consistency 
+              </td>
+              <td valign="top">
+                <ul>
+                  The inconsistent elements (language, layout and design) of the site make users feel that they have little snese of control, familiarity, and reliability. 
+                </ul>
+              </td>
+              <td valign="top">
+                <ul>
+                  Patterns in button arrangement, language, text, and image placement were integrated to instill more comfort in users and allow them to apply the same knowledge to other parts of the page. 
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <br>
+                Ease of Use
+              </td>
+              <td valign="top">
+                <ul>
+                  The ambiguous and inconspicuous links that advertise personalized cupcake deliveries make it difficult for users to discover these options or understand them. 
+                </ul>
+              </td>
+              <td valign="top">
+                <ul>
+                  Subtitles and descriptions/icons before each button / link were added to make these options more apparent and clear to users. A scrolltop was also added so that users can find information more quickly. 
+                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+  
+          <div class="container">
+            <div class="subtitle">
+              Visual Design Style
+            </div>
+            <div class="body-text">
+              After creating the different wireframes, a rough visual design style guide to display the main colors, typography, and reusable components’ different states (buttons on hover, click, etc.) were determined. 
+            </div>
+            <br>
+          </div>
+          <img width="100%" src="images/responsive redesign/visual.png" alt="original home page">
+          <br>
+          <br>
+          <div class="body-text">
+            <br>
+            These choices were heavily inspired by the original webpage. However, the style guide reworks the color pallete and text in order to display a common theme. 
+            <div class="subtitle">
+              High-Fidelity Redesign
+            </div>
+            <div class="body-text">
+              Next, a high-fidelity mockup of the landing page was constructed. 
+            </div>
+            <br>
+          </div>
+        
+          <img width="100%" src="images/responsive redesign/figma.png" alt="figma">
+  
+          <div class="container">
+            <br>
+            <div class="subtitle">
+              Responsive Redesign & Annotated Mockup
+            </div>
+            <div class="body-text">
+              A responsive website was created to maintain the visual appeal across the three different screen sizes mentioned earlier (desktop, tablet, and mobile). A high-fidelity prototype was created for each of the screen sizes. 
+            </div>
+          </div>
+          <br>
+          <img width="100%" src="images/responsive redesign/screen.png" alt="screenr">
+          <div class="container">
+            <br>
+            <div class="body-text">
+              Below are annotated mockups of how elements of the interfaces 
+              respond to their corresponding screen sizes.
+            </div>
+          </div>
+          <img width="100%" src="images/responsive redesign/deskano.png" alt="desktopano">
+          <br>
+          <br>
+          <br>
+          <br>
+          <img width="100%" src="images/responsive redesign/tabmob.png" alt="tabmob">
+          <div class="container">
+            <div class="subtitle">
+              Final Redesigned Website
+            </div>
+            <div class="body-text">
+              The finalized redesign focuses significantly on eliminating ambiguous aspects of the original site. A more accessible navigation bar and footer were worked into the new interface. The structure of the original webpage was reconstructed so that clear strucutres and categories were presented, allowing the flow of the page to come to life. 
+              <br>
+              <br>
+              Click <a href="https://torontocupcakeredesign.pages.dev/" target="_blank">here</a> to access the final redesigned Toronto Cupcake landing page. 
+            </div>
+            </div>
+            
+            <div class="subtitle">
+              Lessons Learned & Afterthoughts
+            </div>
+            <div class="body-text">
+              From ideation to creating low-fidelity and high-fidelity mockups, a responsive
+              redesign of the Toronto Cupcake landing page was developed. The site has design features that can be improved. By redesigning the webpage, I gained first hand experience on understanding how usability and accessibility is integrated into the design process.  
+            </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+        <hr/>
+    </div>
+      <br />
+      <br>
+      <div class="body-text bold centered">
+        Other Projects
+      </div>
+      <div class="grid-container">
+          <div class="grid-small">
+    
+            <div class="project">
+              <div class="project-image-container">
+                <a href="animebase.html">
+                  <img
+                    src="images/development cover.png"
+                    alt="development cover image"
+                  />
+                  <div class="overlay development">
+                    <div class="project-title-small">Anime Base: A Simple React App</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="project">
+                <div class="project-image-container">
+                  <a href="personas.html">
+                    <img
+                      src="images/storyboarding cover.png"
+                      alt="personas cover image"
+                    />
+                    <div class="overlay personas">
+                      <div class="project-title-small">
+                        Personas and Storyboarding
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+          </div>
+    <br />
+    <br />
+    <br />
+    <div class="icons">
+      <a href="https://www.linkedin.com" target="_blank">
+        <img class="icon" src="images/linkedin.png" />
+      </a>
+      <a href="mailto:test@gmail.com" target="_blank">
+        <img class="icon" src="images/email.png" />
+      </a>
+      <a href="https://github.com" target="_blank">
+        <img class="icon" src="images/github.png" />
+      </a>
+    </div>
+    <footer class="footer">Made with ✿ by [insert name]</footer>
+    <br />
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Anime Base: A Simple React App</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html">[insert name]</a>
+      </div>
+
+      <ul class="nav-links white">
+        <li>
+          <a href="index.html">Projects</a>
+        </li>
+        <li>
+          <a href="misc.html">Misc</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="outer-container">
+      <div class="title">
+        Anime Base: A Simple React App
+      </div>
+      <img
+        class="large-image"
+        src="images/development cover.png"
+        alt="development cover"
+      />
+
+      <div class="container">
+        <br />
+        <div class="subtitle">
+          Context
+        </div>
+        <div class="body-text">
+          In this project for CSCI 1300: User Interfaces and User Experiences,
+          a Brown University taught by
+          <a href="https://jeffhuang.com/" target="_blank">Jeff Huang</a>, 
+          we were tasked to develop a a simple "shopping-cart-like" application with sorting and filtering functionalties. 
+          <br /><br />
+          For this project, I designed Anime Base, an application centered around a catalog of anime serries. This project originally stemmed from an idea to get my friends (who like diverse anime styles) to watch some of my favorite anime serries that may also fit their genre.
+          All anime data and information in this repository are inspired by and pulled from
+          <a href="https://myanimelist.net/" target="_blank">MyAnimeList</a> and 
+          <a href="https://anilist.co/search/anime" target="_blank">AniList</a>. 
+          The application is created using the React.js framework.
+        </div>
+        <div class="subtitle">
+          Goal and Functionality 
+        </div>
+        <div class="body-text">
+            The goal of this application is to help users select and keep track of what anime serries they want to watch by picking from a set of anime serries while also keeping track of the number of episdoes in total to watch.
+        </br>
+        <br>
+         Users can view a list of 15 anime serries and choose which ones to add to their to-watch list. The list adds together the number of episodes of each anime serries and displays the total to the user.
+        </br>
+        Below is an image of what the user interface looks like:
+    </br></br>
+        <img
+        class="body-image"
+        src="images/anime base/anime base.png"
+        alt="animebase cover"
+      />
+    </br>
+        Click <a href="https://teddybear333.github.io/Development/" target="_blank">here</a> to see the final deployed site.
+        </div>
+
+        <div class="subtitle">
+           Usability Principles
+          </div>
+          <div class="body-text">
+          Here are the usability principles I kept in mind to make the application intuitive and enjoyable to use:
+        </br> </br>
+          Learnability
+          <ul>
+            <li>
+                Users can easily distingush the anime serries selection gallery (on the left side) and the to-watch selection (on the right side).
+            </li>
+            <li>
+                All buttons are directly linked to specific actions that contain descriptie text (e.g. 'Add to LIst ♡') and no potentially ambiguous icons are used.
+            </li>
+            <li>
+                The interface layout is similar to that of a one-page shopping site so that users can effectively transition from the anime serries selection gallery to the to-watch selections.
+            </li>
+            <li>
+                Users can easily filter, sort, add and remove anime serries from their list with a click of a button.
+            </li>
+          </ul>
+          Efficiency
+          <ul>
+            <li>
+                Useful filter and sort options are at the top and above the anime serries gallery so that users can quily find and categorize their desired options.
+            </li>
+          </ul>
+          Memorability
+          <ul>
+            <li>
+                Once an anime serries is added to the cart, the 'Add to LIst ♡' button is disabled and changed to display 'Added to List ♡', allowing users to easily remember and track which anime serries they have already added to their to-watch list.
+            </li>
+          </ul>
+          </div>
+
+        <div class="subtitle">
+            Technical Details 
+          </div>
+          <div class="body-text">
+            Here is an overview of the architecture of the project.
+          </br> </br>
+          <div class="body-text bold">Component Organization & Hierarchy</div>
+        This code has a realtively straightforward structure.
+        There are 3 main components:
+        <ul>
+            <li>
+                <b>App:</b> This is the root component of the app. It contains all logic involving user interaction (sorting, filtering, and adding/removing anime serries).
+            </li>
+            <li>
+            <b>Gallery:</b> This is a component that displays a list of anime serries as a collection of cards. The component is used for both displaying all avaiable anime serries in the gallery and all anime serries in the user's to-watch selection.
+            </li>
+            <li>
+            <b>ViewOptions:</b> This is a component that contains buttons that allow the user to filter and sort anime serries in the gallery (not included in the to-watch selection).
+            </li>
+          </ul>
+          The hierarchy is as follows:
+          <ul>
+            <li>
+                <b>App</b>
+            </li>
+            <ul>
+                <li>
+                    left section div
+                </li>
+                <ul>
+                    <li>
+                        ViewOptions
+                    </li>
+                    <li>
+                        Gallery (anime serries)
+                  </ul>
+              </ul>
+              <ul>
+                <li>
+                    right section div
+                </li>
+                <ul>
+                    <li>
+                        Gallery (to-watch list)
+                  </ul>
+              </ul>
+          </div>
+          <div class="body-text bold">Flow of Data Between Components</div>
+          <div class="body-text">
+            App holds the state values and state-setting functions. The state values and setters are shown below:
+          </div>
+          <img
+          class="body-image persona"
+          src="images/anime base/code.png"
+          alt="first mental model persona"
+        />
+        <div class="body-text">
+            <b>App</b> passes the necessary values and functions to its child components:
+            <ul>
+              <li>
+            <b> Gallery (anime serries selection)</b> receives animeGalleryItems and a function for adding courses to the to-watch list as props from App
+              </li>
+              <li>
+            <b>Gallery (to-watch list selection)</b> receives listGalleryItems and a function for removing courses from the shopping cart as props from App
+              </li>
+              <li>
+            <b> ViewOptions </b>receives the values and setters for the filters and EpisodeBy as props from App
+              </li>
+            </ul>
+
+        <div class="body-text bold">Triggering States (Actions) Through User Interactions
+        </div>
+        <div class="body-text">
+            The interface changes are triggered by the setter functions: setSeasonFilter, setGenreFilter, setEpisodeBy, setAnimeGalleryItems, and setListGalleryItems.
+        </br></br>
+        <b>Gallery (anime serries selection)</b>
+    </br></br>
+    When the user clicks on the add button for any anime serries card, it triggers a callback function that appends that course item to animeGalleryItems in App, which then is sent to Gallery (to-watch selection) to update the items displayed on the list.        </div>
+   <b>Gallery (to-watch selection)</b>
+</br></br>
+When the user clicks on the remove button for any item on the list, it triggers a callback function that removes that course item from cartGalleryItems in App, which is sent back to Gallery (anime serries selection) to update the anime serries displayed on the list.
+</br></br>
+<b>ViewOptions</b>  
+</br></br>
+When the user clicks on a filter or sort method in ViewOptions, the corresponding setter function is called, triggering a useEffect hook in App to filter, sort, and update animeGalleryItems. This updated list of items is then passed into the Gallery (anime serries selection) component to update the displayed anime serries cards.
+</br></br>
+Click <a href="https://github.com/teddybear333/Development" target="_blank">here</a>  to see the source code.
+</div>
+
+        <div class="subtitle">
+            Afterthoughts
+          </div>
+          <div class="body-text">
+            This project was a basic React.js development. While the scope of the application's current functionalities, design, and content are limited, the structure of this project could be improved and expaned to more developed anime database in future iterations.
+      </a>
+    </div>
+  </div>
+
+  <div class="container">
+      <hr/>
+  </div>
+    <br />
+    <br>
+    <div class="body-text bold centered">
+      Other Projects
+    </div>
+    <div class="grid-container">
+        <div class="grid-small">
+  
+          <div class="project">
+            <div class="project-image-container">
+              <a href="iterative.html">
+                <img
+                  src="images/iterative cover.png"
+                  alt="iterative cover image"
+                />
+                <div class="overlay development">
+                  <div class="project-title-small">Interactive Design and User Testing </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="project">
+              <div class="project-image-container">
+                <a href="personas.html">
+                  <img
+                    src="images/storyboarding cover.png"
+                    alt="personas cover image"
+                  />
+                  <div class="overlay personas">
+                    <div class="project-title-small">
+                      Personas and Storyboarding
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+  <br />
+  <br />
+  <br />
+  <div class="icons">
+    <a href="https://www.linkedin.com/" target="_blank">
+      <img class="icon" src="images/linkedin.png" />
+    </a>
+    <a href="mailto:test@brown.edu" target="_blank">
+      <img class="icon" src="images/email.png" />
+    </a>
+    <a href="https://github.com/" target="_blank">
+      <img class="icon" src="images/github.png" />
+    </a>
+  </div>
+  <footer class="footer">Made with ✿ by [insert name]</footer>
+  <br />
+  <script src="app.js"></script>
+</body>
+</html>

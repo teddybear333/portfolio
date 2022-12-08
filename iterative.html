@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Iterative Design</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html">[insert name]</a>
+      </div>
+
+      <ul class="nav-links white">
+        <li>
+          <a href="index.html">Projects</a>
+        </li>
+        <li>
+          <a href="misc.html">Misc</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="outer-container">
+      <div class="title">
+        Iterative Design and User Testing: Heptabase
+      </div>
+      <img
+        class="large-image"
+        src="images/iterative cover.png"
+        alt="iterative design cover image"
+      />
+      <div class="container">
+        <div class="subtitle iterative">Context</div>
+        <div class="body-text">
+          This project was made for CSCI 1300: User Interfaces and User
+          Experiences, a class at Brown University taught by
+          <a href="https://jeffhuang.com/" target="_blank">Jeff Huang</a>. Our
+          goal was to choose a startup and based off of only a short summary of
+          the goals of the startup, we had to design an interface and perform
+          user testing.
+        </div>
+        <div class="body-text">
+          Our team of 4 created a prototype tablet app for 
+          <a href="https://heptabase.com/" target="_blank">Heptabase</a>, a visual note-taking tool that helps you learn complex topics.
+        </div>
+
+        <div class="subtitle">
+          The Problem
+        </div>
+        <div class="body-text">
+          We attempted to solve the same problem that Heptabase's developers were trying to solve, based only on their description on
+          <a href="https://www.ycombinator.com/companies/heptabase" target="_blank">YCombinator</a>. This left us with <b>three success criteria</b>:
+        </br> </br> 
+        1. Our solution must involve putting notes on whiteboards;
+         It must allow users to search through their notes to support visual recall; and
+         It should ultimately support a user's ability to learn complex topics.
+        </br>
+         2. It must allow users to search through their notes to support visual recall; and
+        </br> 
+         3. It should ultimately support a user's ability to learn complex topics.
+        </div>
+
+        <div class="subtitle iterative">Ideation</div>
+   
+        <div class="body-text">
+          To kickstart our design process, we first drew up several <b>sketches</b> for potential interfaces.
+          <img
+          class="body-image"
+          src="images/iterative design/sketch-iterative.png"
+          alt="sketch"
+        />
+        </div>
+
+        <div class="body-text">
+          In these, we explored a few design alternatives:
+          <ul>
+            <li>
+              We centered our user flows around either a home screen, a files page, or a whiteboard;
+            </li>
+            <li>
+              We considered different primary screen orientations;
+            </li>
+            <li>
+              We varied tool and menu placement, between having toolbars on page margins, buttons that reveal slide-out menus, and icons on notes themselves; and
+            </li>
+            <li>
+              We laid out our file views in different ways (in grids/lists, with/without thumbnails, etc.).
+            </li>
+          </ul>
+        </br>
+        We then distilled our sketches into a number of key features—ones which we felt would allow our ideal note-taking app to better support learning:
+      </br> </br>
+      1. <b>Multi-Modal User Input</b>:
+      <ul>
+        <li>
+          Our app should support both free-hand writing/drawing and typed text, as users absorb content most effectively through different mediums.
+        </li>
+        <li>
+          It should also provide a way to quickly jot down notes with similar levels of flexibility, so that important information isn't missed due to UI inefficiencies.
+        </li>
+      </ul>
+      2. <b>Flexible Organization</b>:
+      <ul>
+        <li>
+          The folder system should be as unopinionated as possible, to prevent constraining the user to a certain way of organizing (like OneNote does, with its pages/sections).
+        </li>
+        <li>
+          There should also be ways to side-step bad organization, e.g. search, quick access.
+        </li>
+      </ul>
+      Finally, we refined our sketches into wireframes incorporating the above features:
+    </br>
+  </br>
+  <img
+  class="body-image"
+  src="images/iterative design/widreframe-iterative.png"
+  alt="wireframe"
+/>
+      </div>
+        <div class="subtitle">
+          Prototyping & Iteration
+        </div>
+        <div class="body-text">
+          In order to begin iterating on our design, we first had to have something to show, to collect feedback. Thus, we developed an interactive, high-fidelity prototype in Figma:
+        </br>
+      </br>
+      <img
+      class="body-image"
+      src="images/iterative design/hifi-iterative.png"
+      alt="hifi"
+    />
+        </div>
+        <div class="body-text">
+          Then, having received feedback from fellow UX practitioners, we made a round of revisions addressing the main points brought up in their critiques:
+        </div>
+        <br />
+        <div class="body-text">
+          1. <b>App Navigation</b>
+          <ul>
+            <li>
+              [Feedback] Reviewers didn't expect to be sent to a whiteboard right after logging in.
+            </li>
+            <li>
+              [Improvement] To provide a better mental model of app navigation, we modified our app to instead direct users to the files page, which now acts as a home screen.
+            </li>
+          </ul>
+         2. <b>Feature Learnability</b>
+         <ul>
+          <li>
+            [Feedback] It was unclear what snippets were for and how to use them.
+          </li>
+          <li>
+            [Improvement] To enhance learnability, we added instructional placeholder text to new snippets to help explain their purpose and usage to first-time users and testers. We also added a new user flow to our prototype.
+          </li>
+        </ul>
+        3. <b>File & Folder Creation</b>
+        <ul>
+          <li>
+            [Feedback] It wasn't immediately obvious how new files, folders, etc. could be created.
+          </li>
+          <li>
+            [Improvement] We added a "create" section to the files page (accessible also from the files overlay), which allows users to more efficiently create new whiteboards, folders, and/or snippets.
+          </li>
+        </ul>
+        4. <b>Prototype Representativeness</b>
+        <ul>
+          <li>
+            [Feedback] Reviewers commented that our prototype's file structure was improbably clean, and wanted to see how we would deal with more "realistic" scenarios: e.g. multiple nested folders.
+          </li>
+          <li>
+            [Improvement] We included more representative files and folders, and added nested folder navigation + scrollability to the prototype. This allowed us to demo a more intensive file structure.
+          </li>
+        </ul>
+        <img
+        class="body-image"
+        src="images/iterative design/changes.png"
+        alt="interactive"
+      />
+      Left: the new home page (1), showing the new "create" section (3), and the breadcrumbs and folder navigation system (4). Right: placeholder text for a new snippet provides insight into how the snippets are meant to be used (2).
+        </div>
+
+        <div class="subtitle">
+          User Testing
+        </div>
+        <div class="body-text">
+          As a last step, we also sent our prototype to 
+          <a href="https://www.usertesting.com/" target="_blank">UserTesting.com </a>
+          to obtain feedback from users outside of the Brown University Community. Their recordings can be found below:
+          <ul>
+            <li>
+              <a href="https://app.usertesting.com/v/8ac2d78a-ccea-4c51-8e0a-7e9f0b905422?encrypted_video_handle=baba58db-d6d1-4d21-af1c-b63fddc98d6c#!/tasks&shared_via=link" target="_blank">User 1</a>
+            </li>
+            <li>
+              <a href="https://app.usertesting.com/v/77bae5ed-7738-459c-89b6-30a0947603ae?encrypted_video_handle=5203ce27-3ffc-4f36-9898-cab8daffb2f5#!/tasks&shared_via=link" target="_blank">User 2</a>
+            </li>
+            <li>
+              <a href="https://app.usertesting.com/v/4147a9b7-c316-4055-ae8f-eac2792a7a10?encrypted_video_handle=e1e142ce-0e0a-420c-827c-063238b1c26d#!/notes" target="_blank">User 3</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="body-text">
+          As our app's main functionality centered on multi-modal note-taking and flexible organization, we asked our testers to complete tasks using features relevant to those goals.
+        </div>
+        <div class="body-text">
+          Specifically, we provided them with the following instructions:
+        </div>
+        <div class="body-text">
+          1. Find the "Demo Whiteboard", and add a textbox somewhere near its top-left corner.
+          </br>
+          2. You remember that you took notes on a specific term several weeks ago and want to review them. Use the Search functionality to search for the term "Lorem Ipsum."
+        </br>
+        3. You have a brilliant idea that you want to write down immediately without creating a new whiteboard. Create and save a new "Snippet" to record your thoughts.
+        </div>
+        <div class="body-text">
+          Here's a summary of our findings from those user tests:
+          <ul>
+            <li>
+              Users found the home page to be intuitive, clean, and easy to navigate.
+            </li>
+            <li>
+              Users quickly figured out how to add textboxes and perform searches, as the icons we used for them conveyed their meaning effectively.
+            </li>
+            <li>
+              Creating snippets took the most time, as our users didn't know what a snippet was, nor how to create one.
+            </li>
+          </ul>
+        </div>
+        <div class="body-text">
+          These findings aligned with our expectations. We emphasized simplicity in our interfaces, so icons played a heavy role in communicating their functionality. Because snippets are a novel concept, and its icon was poorly chosen, it made sense that users struggled with that task.
+        </div>
+        <div class="body-text">
+          For our next iteration, we'd like to incorporate an in-app tutorial, in the form of a series of short animatics, to provide first-time users with more clarity. We'd also experiment with different icons for our snippets overlay, possibly changing its placement altogether to improve noticeability and access.
+        </div>
+        <div class="subtitle">
+          Final Mockup 
+        </div>
+        <div class="body-text">
+          Our final mockup can be found below:
+        </div>
+        <div class="body-text">
+          <div class="videowrapper">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F8aMkwjf3cH4HnFvhJfVHml%2FIterative-Design%3Fscaling%3Dscale-down%26page-id%3D0%253A1%26node-id%3D115%253A2%26starting-point-node-id%3D115%253A2" allowfullscreen></iframe>
+          </div>
+        <br />
+        <br />
+      </div>
+        <div class="body-text">
+          We believe that our app somewhat achieves its goal of being a visual note-taking tool that helps users learn complex topics—doing so by supporting multi-modal user input and enabling flexible organization. It goes without saying, though, that there is still plenty of room for iteration and improvement!
+        </div>
+        <div class="subtitle">
+          Conclusion
+        </div>
+        <div class="body-text">
+          Through this project, our team came up with a new design for an app based only on a startup's description. We refined sketches and wireframes into interactive prototypes, made improvements based on collected feedback, and conducted user testing.
+        </br></br>
+        All told, it was good practice! 4 out of 5 dentists agree that iteration is central to good design, after all; though, it's a shame we didn't actually do multiple rounds of it this time.
+        </div>
+      </div>
+      <br />
+      <div class="container">
+          <hr/>
+      </div>
+
+      <br />
+      <br>
+      <div class="body-text bold centered">
+        Other Projects
+      </div>
+      <div class="grid-container">
+          <div class="grid-small">
+            <div class="project">
+              <div class="project-image-container">
+                <a href="redesign.html">
+                  <img
+                    src="images/redesign cover.png"
+                    alt="redesign cover image"
+                  />
+                  <div class="overlay redesign">
+                    <div class="project-title-small">
+                      Toronto Cupcake Redesign
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="project">
+              <div class="project-image-container">
+                <a href="animebase.html">
+                  <img
+                    src="images/development cover.png"
+                    alt="development cover image"
+                  />
+                  <div class="overlay development">
+                    <div class="project-title-small">Anime Base: A Simple React App</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+      <br />
+      <br />
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <div class="icons">
+        <a href="https://www.linkedin.com/" target="_blank">
+            <img class="icon" src="images/linkedin.png" />
+          </a>
+          <a href="mailto:test@brown.edu" target="_blank">
+            <img class="icon" src="images/email.png" />
+          </a>
+          <a href="https://github.com/" target="_blank">
+            <img class="icon" src="images/github.png" />
+          </a>
+  </body>
+</html>
